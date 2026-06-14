@@ -1,0 +1,56 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 60px;
+}
+
+.pagination__btn {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 2px solid var(--color-primary);
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--second-family);
+    font-size: 15px;
+    color: var(--color-dark-xl);
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    font-weight: 400;
+}
+
+.pagination__btn:hover {
+    background-color: var(--color-primary-light);
+}
+
+.pagination__btn:active {
+    background-color: var(--color-primary);
+}
+
+.pagination__btn--active {
+    background-color: var(--color-primary);
+    pointer-events: none;
+}
+
+.pagination__btn--disabled {
+    border-color: var(--color-dark-s);
+    color: var(--color-dark-s);
+    pointer-events: none;
+    cursor: default;
+}
+
+/* Pets page header is on white background */
+.pets-page .header--light {
+    position: static;
+    padding: 30px 0;
+    background: var(--color-light-xl);
+    border-bottom: 1px solid var(--color-light-l);
+}
+
+.pets-page {
+    padding-top: 0;
+}

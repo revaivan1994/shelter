@@ -1,0 +1,23 @@
+/* Pets page: header is static, not fixed */
+.header--static {
+    position: static;
+    top: auto;
+    background-color: var(--color-light-xl);
+    padding: 30px 0;
+    border-bottom: 1px solid var(--color-light-l);
+}
+
+/* On pets page logo subtitle is dark */
+.header--static .logo__subtitle {
+    color: var(--color-dark-l);
+}
+
+/* Friends section top padding adjusted (no offset for fixed header) */
+.friends--page {
+    padding-top: 60px;
+}
+
+/* 4-column grid for pets page */
+.friends__grid .card {
+    width: 100%;
+}

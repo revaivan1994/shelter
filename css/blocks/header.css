@@ -1,15 +1,26 @@
 .header {
-    position: fixed;
+    position: absolute;
     top: 30px;
     left: 0;
     width: 100%;
-    min-height: 60px;
-    .container {
-        display: flex;
-        justify-content: space-between;
-    }
+    z-index: 100;
 }
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
 .logo__title {
+    font-family: var(--font-family);
     font-weight: 400;
     font-size: 32px;
     line-height: 110%;
@@ -17,6 +28,7 @@
     color: var(--color-primary);
     text-transform: capitalize;
 }
+
 .logo__subtitle {
     margin-top: 10px;
     padding-left: 4px;
@@ -26,27 +38,60 @@
     letter-spacing: 0.1em;
     color: var(--color-light-xl);
 }
-.menu {
-    height: 100%;
-    list-style: none;
+
+/* Nav */
+.nav__list {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
     gap: 35px;
-    a {
-        font-family: var(--second-family);
-        font-weight: 400;
-        font-size: 15px;
-        line-height: 160%;
-        color: var(--color-dark-s);
-        &.active {
-            pointer-events: none
-        }
-        &.active:after {
-            content: '';
-            display: block;
-            height: 3px;
-            background: var(--color-primary);
-        }
-    }
+    padding-top: 16px;
+}
+
+.nav__link {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    color: var(--color-dark-s);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav__link:hover {
+    color: var(--color-light-xl);
+}
+
+.nav__link--active {
+    pointer-events: none;
+    color: var(--color-light-xl);
+    position: relative;
+}
+
+.nav__link--active::after {
+    content: '';
+    display: block;
+    height: 3px;
+    background: var(--color-primary);
+    margin-top: 2px;
+}
+
+/* Header on white background (pets page) */
+.header--light .logo__title {
+    color: var(--color-primary);
+}
+
+.header--light .logo__subtitle {
+    color: var(--color-dark-l);
+}
+
+.header--light .nav__link {
+    color: var(--color-dark-m);
+}
+
+.header--light .nav__link:hover {
+    color: var(--color-dark-xl);
+}
+
+.header--light .nav__link--active {
+    color: var(--color-dark-xl);
 }
