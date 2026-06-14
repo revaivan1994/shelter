@@ -1,0 +1,89 @@
+/* libs */
+@import url("libs/normalize.css");
+@import url("libs/variables.css");
+
+
+/* blocks */
+
+@import url("blocks/header.css");
+@import url("blocks/promo.css");
+@import url("blocks/footer.css");
+@import url("blocks/about.css");
+@import url("blocks/help.css");
+@import url("blocks/pets.css");
+
+h1, h2, h3, h4, h5, figure, p, ol, ul {
+  margin: 0;
+}
+  
+ol[role="list"], ul[role="list"] {
+  list-style: none;
+  padding-inline: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-inline-size: 100%;
+}
+
+html {
+  font-family: 'Georgia';
+  scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.text {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: var(--color-dark-s);
+}
+.btn {
+  display: block;
+  border-radius: 100px;
+  padding: 15px 45px;
+  height: 52px;
+  background: var(--color-primary);
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  color: var(--color-dark-3xl);
+  transition: all 0.5s ease-out;
+  border: none;
+  &:hover {
+    background: var(--color-primary-light);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  }
+}
+.title {
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: var(--color-dark-l);
+}
+.arrow {
+  width: 52px;
+  height: 52px;
+  border-radius: 100px;
+  border: 2px solid var(--color-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
