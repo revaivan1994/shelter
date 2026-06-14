@@ -12,7 +12,7 @@
     align-items: flex-start;
 }
 
-/* Logo */
+
 .logo {
     display: flex;
     flex-direction: column;
@@ -39,7 +39,6 @@
     color: var(--color-light-xl);
 }
 
-/* Nav */
 .nav__list {
     display: flex;
     align-items: center;
@@ -75,17 +74,17 @@
     margin-top: 2px;
 }
 
-/* Header on white background (pets page) */
-.header--light .logo__title {
-    color: var(--color-primary);
-}
 
-.header--light .logo__subtitle {
+.header--light .logo__title {
     color: var(--color-dark-l);
 }
 
+.header--light .logo__subtitle {
+    color: var(--color-dark-3xl);
+}
+
 .header--light .nav__link {
-    color: var(--color-dark-m);
+    color: var(--color-dark-l);
 }
 
 .header--light .nav__link:hover {

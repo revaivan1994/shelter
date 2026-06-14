@@ -1,6 +1,6 @@
 .footer {
-    background: var(--color-bg-dark);
-    padding: 40px 0;
+    background: url('../../img/bg/promo-bg.jpg') center center / cover no-repeat;
+    padding: 60px 0;
     position: relative;
     overflow: hidden;
 }
@@ -19,10 +19,12 @@
 }
 
 .footer__title {
+    margin-top: 56px;
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 35px;
     line-height: 130%;
+    letter-spacing: 0.06em;
     color: var(--color-light-xl);
     margin-bottom: 40px;
 }
@@ -48,8 +50,6 @@
 .footer__contact-icon {
     width: 40px;
     height: 40px;
-    border: 2px solid var(--color-primary);
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,16 +57,17 @@
 }
 
 .footer__contact-icon svg {
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 32px;
 }
 
 .footer__contact-text {
-    font-family: var(--second-family);
-    font-size: 15px;
-    line-height: 160%;
-    color: var(--color-light-xl);
-    transition: color 0.3s;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: var(--color-primary);
 }
 
 .footer__contact:hover .footer__contact-text {
@@ -92,11 +93,11 @@
 }
 
 .footer__image {
-    position: absolute;
-    right: 0;
-    bottom: 0;
+    align-self: end;
+    display: flex;
     width: 310px;
     pointer-events: none;
+    margin-bottom: -60px;
 }
 
 .footer__image img {
