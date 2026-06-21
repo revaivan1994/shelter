@@ -1,0 +1,105 @@
+@import url("libs/normalize.css");
+@import url("libs/variables.css");
+@import url("blocks/header.css");
+@import url("blocks/footer.css");
+@import url("blocks/about.css");
+@import url("blocks/promo.css");
+@import url("blocks/help.css");
+@import url("blocks/pets.css");
+
+/* Base */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--color-light-xl);
+    color: var(--color-dark-xl);
+}
+
+.container {
+    width: 100%;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 45px;
+    border-radius: 100px;
+    border: 2px solid var(--color-primary);
+    background-color: transparent;
+    font-family: var(--font-family);
+    font-size: 15px;
+    line-height: 160%;
+    color: var(--color-dark-xl);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    white-space: nowrap;
+}
+
+.btn-size-promo {
+    width: 207px;
+    height: 52px;
+}
+
+.btn-size-friends {
+    width: 261px;
+    height: 52px;
+}
+
+.btn:hover {
+    background-color: var(--color-primary-light);
+}
+
+.btn:active {
+    background-color: var(--color-primary);
+}
+
+.btn--filled {
+    background-color: var(--color-primary);
+    color: var(--color-dark-xl);
+}
+
+.btn--filled:hover {
+    background-color: var(--color-primary-light);
+}
+
+.btn--filled:active {
+    background-color: var(--color-primary);
+}
