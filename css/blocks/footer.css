@@ -1,0 +1,138 @@
+.footer {
+    background: url('../../img/bg/promo-bg.jpg') center center / cover no-repeat;
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer__container {
+    display: flex;
+    align-items: flex-start;
+    gap: 120px;
+    position: relative;
+    z-index: 1;
+    min-height: 220px;
+}
+
+.footer__section {
+    flex: 1;
+}
+
+.footer__title {
+    margin-top: 56px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: var(--color-light-xl);
+    margin-bottom: 40px;
+}
+
+.footer__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.footer__contact {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer__contact:hover {
+    color: var(--color-primary);
+}
+
+.footer__contact-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.footer__contact-icon svg {
+    width: 40px;
+    height: 32px;
+}
+
+.footer__contact-text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: var(--color-primary);
+}
+
+.footer__contact:hover .footer__contact-text {
+    color: var(--color-primary);
+}
+
+.footer__locations {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.footer__location {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer__location:hover .footer__contact-text {
+    color: var(--color-primary);
+}
+
+.footer__image {
+    align-self: end;
+    display: flex;
+    width: 310px;
+    pointer-events: none;
+    margin-bottom: -60px;
+}
+
+.footer__image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 1279px) {
+    .footer__container {
+        gap: 40px;
+        flex-wrap: wrap;
+        position: relative;
+        padding-bottom: 200px;
+    }
+
+    .footer__title {
+        margin-top: 0;
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+
+    .footer__contact-text,
+    .footer__location .footer__contact-text {
+        font-size: 16px;
+    }
+
+    .footer__image {
+        position: relative;
+        bottom: -65px;
+        right: 0;
+        width: 300px;
+        margin: 0 auto; 
+        margin-bottom: 0;
+        align-self: auto;
+        z-index: 0;
+    }
+}

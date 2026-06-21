@@ -123,3 +123,24 @@
     color: var(--color-dark-m);
     max-width: 380px;
 }
+
+@media (max-width: 768px) {
+    .help__grid {
+        gap: 55px 60px;
+    }
+
+    .donation__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .donation__image {
+        order: 2;
+    }
+
+    .donation__content {
+       order: 1;
+    }
+}
