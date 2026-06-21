@@ -33,3 +33,10 @@
         --section-padding: 80px;
     }
 }
+
+@media (max-width: 480px) {
+    :root {
+        --container-padding: 10px;
+        --section-padding: 50px;
+    }
+}

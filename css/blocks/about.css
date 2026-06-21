@@ -68,7 +68,14 @@
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 30px;
+}
+
+.friends__slider-arrows {
+    display: flex;
+    gap: 12px;
+    flex-shrink: 0;
 }
 
 .friends__cards {
@@ -77,8 +84,20 @@
     flex: 1;
     justify-content: center;
     overflow: hidden;
+    order: 2;
 }
 
+.friends__slider-arrows {
+    display: contents;
+}
+
+.slider-arrow--prev {
+    order: 1;
+}
+
+.slider-arrow--next {
+    order: 3;
+}
 
 .friends__btn-wrap {
     display: flex;
@@ -92,6 +111,7 @@
     gap: 30px;
     margin-bottom: 60px;
 }
+
 .friends__btn-wrap {
     display: flex;
     justify-content: center;
@@ -187,9 +207,7 @@
 
 @media (max-width: 1279px) {
     .friends__slider {
-        display: flex;
         justify-content: center;
-        align-items: center;
         gap: 12px;
     }
 
@@ -207,7 +225,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
     .about__container {
         flex-direction: column;
         gap: 60px;
@@ -243,9 +261,82 @@
     }
 
     .friends__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    margin-bottom: 60px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        margin-bottom: 60px;
+    }
 }
+
+@media (max-width: 720px) {
+    .friends__slider-arrows {
+        display: flex;
+        gap: 30px;
+    }
+
+    .slider-arrow--prev,
+    .slider-arrow--next {
+        order: initial;
+    }
+
+    .friends__cards {
+        order: initial;
+    }
+
+    .friends__slider {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .friends__cards {
+        width: 100%;
+        max-width: 320px;
+        justify-content: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .friends__slider-arrows {
+        display: flex;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 570px) {
+    .friends__grid {
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+        width: 270px;
+    }
+    .card {
+        max-width: 270px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .about__title {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .about__content {
+        order: 1;
+        width: 300px;
+        height: 494px;
+    }
+
+    .about__image {
+        width: 260px;
+    }
+
+    .friends__title {
+        font-size: 25px;
+        width: 300px;
+        padding: 0;
+    }
 }

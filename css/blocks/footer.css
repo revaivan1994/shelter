@@ -130,9 +130,34 @@
         bottom: -65px;
         right: 0;
         width: 300px;
-        margin: 0 auto; 
+        margin: 0 auto;
         margin-bottom: 0;
         align-self: auto;
         z-index: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer__container {
+        text-align: center;
+    }
+
+    .footer__contact {
+        justify-content: center;
+    }
+
+    .footer__location {
+        justify-content: center;
+    }
+    footer {
+        padding: 0!important;
+    }
+    .footer__image {
+        width: 260px;
+        bottom: -40px;
+        padding: 0;
+    }
+    .footer__container {
+        padding-bottom: 0;
     }
 }
