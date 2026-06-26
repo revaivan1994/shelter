@@ -54,3 +54,21 @@
 .pets-page {
     padding-top: 0;
 }
+
+.friends__cards {
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.friends__cards--leaving-next {
+    opacity: 0;
+    transform: translateX(-40px);
+}
+
+.friends__cards--leaving-prev {
+    opacity: 0;
+    transform: translateX(40px);
+}
+
+.friends__cards--entering {
+    opacity: 0;
+}

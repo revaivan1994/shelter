@@ -24,3 +24,27 @@
     width: 187px;
     height: 52px;
 }
+
+.friends__grid {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.friends__grid--leaving {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.friends__grid--entering {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.pagination__btn {
+    transition: background-color 0.3s, color 0.3s, opacity 0.3s;
+}
+
+.pagination__btn--disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+}

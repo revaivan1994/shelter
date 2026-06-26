@@ -29,8 +29,19 @@
                 <span class="burger__line"></span>
                 <span class="burger__line"></span>
             </button>
+
+            <div class="mobile-menu" id="mobile-menu">
+                <ul class="mobile-menu__list">
+                    <li><a href="index.html" class="mobile-menu__link">About the shelter</a></li>
+                    <li><a href="pets.html" class="mobile-menu__link">Our pets</a></li>
+                    <li><a href="index.html#help" class="mobile-menu__link">Help the shelter</a></li>
+                    <li><a href="index.html#footer" class="mobile-menu__link">Contacts</a></li>
+                </ul>
+            </div>
         </div>
     </header>
+
+    <div class="mobile-menu__overlay" id="mobile-menu-overlay"></div>
 
     <main>
         <section class="promo" id="promo">
@@ -70,43 +81,15 @@
                 <h2 class="friends__title">Our friends who<br>are looking for a house</h2>
 
                 <div class="friends__slider">
-                    <div class="friends__cards">
-                        <div class="card">
-                            <div class="card__image">
-                                <img src="img/animals/pets-katrine.png" alt="Katrine the cat" width="270" height="270">
-                            </div>
-                            <div class="card__body">
-                                <h3 class="card__name">Katrine</h3>
-                                <button class="btn card__btn" type="button">Learn more</button>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card__image">
-                                <img src="img/animals/pets-jennifer.png" alt="Jennifer the dog" width="270"
-                                    height="270">
-                            </div>
-                            <div class="card__body">
-                                <h3 class="card__name">Jennifer</h3>
-                                <button class="btn card__btn" type="button">Learn more</button>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card__image">
-                                <img src="img/animals/pets-woody.png" alt="Woody the dog" width="270" height="270">
-                            </div>
-                            <div class="card__body">
-                                <h3 class="card__name">Woody</h3>
-                                <button class="btn card__btn" type="button">Learn more</button>
-                            </div>
-                        </div>
+                    <div class="friends__cards" id="friends-cards">
+                        <!-- adds card with js -->
                     </div>
 
                     <div class="friends__slider-arrows">
-                        <button class="slider-arrow slider-arrow--prev" type="button"
+                        <button class="slider-arrow slider-arrow--prev" type="button" id="slider-prev"
                             aria-label="Previous">&#8592;</button>
-                        <button class="slider-arrow slider-arrow--next" type="button" aria-label="Next">&#8594;</button>
+                        <button class="slider-arrow slider-arrow--next" type="button" id="slider-next"
+                            aria-label="Next">&#8594;</button>
                     </div>
                 </div>
 
@@ -401,6 +384,7 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/friends-slider.js"></script>
 </body>
 
 </html>
