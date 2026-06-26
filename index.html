@@ -383,8 +383,30 @@
 
     </footer>
 
+    <div class="popup-overlay" id="popup-overlay">
+        <div class="popup" id="popup">
+            <button class="popup__close" type="button" id="popup-close" aria-label="Close">&times;</button>
+            <div class="popup__image">
+                <img id="popup-img" src="" alt="">
+            </div>
+            <div class="popup__body">
+                <h3 class="popup__name" id="popup-name"></h3>
+                <p class="popup__row"><span class="popup__label">Type:</span> <span id="popup-type"></span></p>
+                <p class="popup__row"><span class="popup__label">Breed:</span> <span id="popup-breed"></span></p>
+                <p class="popup__row"><span class="popup__label">Age:</span> <span id="popup-age"></span></p>
+                <p class="popup__description" id="popup-description"></p>
+                <p class="popup__row"><span class="popup__label">Inoculations:</span> <span
+                        id="popup-inoculations"></span></p>
+                <p class="popup__row"><span class="popup__label">Diseases:</span> <span id="popup-diseases"></span></p>
+                <p class="popup__row"><span class="popup__label">Parasites:</span> <span id="popup-parasites"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+
     <script src="js/main.js"></script>
     <script src="js/friends-slider.js"></script>
+    <script src="js/popup.js"></script>
 </body>
 
 </html>

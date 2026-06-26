@@ -7,6 +7,9 @@
 @import url("blocks/help.css");
 @import url("blocks/pets.css");
 
+
+@import url("blocks/popup.css");
+
 /* Base */
 *,
 *::before,

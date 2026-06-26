@@ -37,6 +37,7 @@
     function createCard(pet) {
         const card = document.createElement('div');
         card.className = 'card';
+        card.dataset.petName = pet.name; 
         card.innerHTML = `
             <div class="card__image">
                 <img src="${getImgSrc(pet)}" alt="${pet.name} the ${pet.type.toLowerCase()}" width="270" height="270">

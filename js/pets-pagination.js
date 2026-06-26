@@ -30,20 +30,16 @@
         return arr;
     }
 
-    // Сгенерировать 48 карточек: каждый питомец повторяется поровну,
-    // соседние карточки не совпадают
     function generateDeck(pets, total) {
-        const repeats = total / pets.length; // например 48/8 = 6
+        const repeats = total / pets.length;
         let pool = [];
         for (let i = 0; i < repeats; i++) {
             pool = pool.concat(shuffle(pets));
         }
         pool = shuffle(pool);
 
-        // Разрешаем конфликты соседей простым свапом
         for (let i = 1; i < pool.length; i++) {
             if (pool[i].name === pool[i - 1].name) {
-                // ищем дальше элемент, который можно поставить сюда без конфликта
                 let swapped = false;
                 for (let j = i + 1; j < pool.length; j++) {
                     if (pool[j].name !== pool[i - 1].name &&
@@ -54,7 +50,6 @@
                         break;
                     }
                 }
-                // fallback: если не нашли — просто свапнем с следующим
                 if (!swapped && i < pool.length - 1) {
                     [pool[i], pool[i + 1]] = [pool[i + 1], pool[i]];
                 }
@@ -72,6 +67,7 @@
     function createCard(pet) {
         const card = document.createElement('div');
         card.className = 'card';
+        card.dataset.petName = pet.name; 
         card.innerHTML = `
             <div class="card__image">
                 <img src="${getImgSrc(pet)}" alt="${pet.name} the ${pet.type.toLowerCase()}" width="270" height="270">
@@ -136,7 +132,7 @@
             renderPagination();
 
             gridContainer.classList.add('friends__grid--entering');
-            void gridContainer.offsetWidth; // reflow
+            void gridContainer.offsetWidth; 
             gridContainer.classList.remove('friends__grid--leaving', 'friends__grid--entering');
 
             const onEnterEnd = () => {
@@ -151,7 +147,7 @@
 
     function setupForViewport() {
         const newCardsPerPage = getCardsPerPage();
-        if (newCardsPerPage === cardsPerPage && fullDeck.length) return; // ничего не изменилось
+        if (newCardsPerPage === cardsPerPage && fullDeck.length) return;
 
         cardsPerPage = newCardsPerPage;
         totalPages = 48 / cardsPerPage;
