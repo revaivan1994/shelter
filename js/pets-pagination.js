@@ -6,21 +6,19 @@
     if (!gridContainer || !paginationContainer) return;
 
     let allPets = [];
-    let fullDeck = [];       // 48 карточек
+    let fullDeck = [];  
     let currentPage = 1;
     let cardsPerPage = 8;
     let totalPages = 6;
     let isAnimating = false;
 
-    // Сколько карточек на странице — зависит от ширины экрана
     function getCardsPerPage() {
         const w = window.innerWidth;
-        if (w > 1279) return 8;   // desktop: 6 страниц
-        if (w > 720) return 6;    // tablet: 8 страниц
-        return 3;                 // mobile: 16 страниц
+        if (w > 1279) return 8;   
+        if (w > 720) return 6;  
+        return 3;                
     }
 
-    // Перемешать массив (Фишер-Йейтс)
     function shuffle(array) {
         const arr = array.slice();
         for (let i = arr.length - 1; i > 0; i--) {

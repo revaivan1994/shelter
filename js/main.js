@@ -3,22 +3,43 @@ const burger = document.querySelector('.burger');
 const mobileMenu = document.getElementById('mobile-menu');
 const overlay = document.getElementById('mobile-menu-overlay');
 
-function toggleMenu() {
-    const isOpen = mobileMenu.classList.toggle('mobile-menu--open');
-    overlay.classList.toggle('mobile-menu__overlay--visible', isOpen);
-    burger.classList.toggle('burger--active', isOpen);
-    document.body.style.overflow = isOpen ? 'hidden' : '';
+function openMenu() {
+    mobileMenu.classList.add('mobile-menu--open');
+    overlay.classList.add('mobile-menu__overlay--visible');
+    burger.classList.add('burger--active');
+    document.body.style.overflow = 'hidden';
 }
 
-burger.addEventListener('click', toggleMenu);
-overlay.addEventListener('click', toggleMenu);
+function closeMenu() {
+    mobileMenu.classList.remove('mobile-menu--open');
+    overlay.classList.remove('mobile-menu__overlay--visible');
+    burger.classList.remove('burger--active');
+    document.body.style.overflow = '';
+}
 
-// Закрытие меню при клике на ссылку (чтобы не оставалось открытым после перехода)
+burger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (mobileMenu.classList.contains('mobile-menu--open')) {
+        closeMenu();
+    } else {
+        openMenu();
+    }
+});
+
+// Закрытие по клику в любом месте вне меню (включая "пустые" зоны хедера)
+document.addEventListener('click', (e) => {
+    const isMenuOpen = mobileMenu.classList.contains('mobile-menu--open');
+    if (!isMenuOpen) return;
+
+    const clickedInsideMenu = mobileMenu.contains(e.target);
+    const clickedBurger = burger.contains(e.target);
+
+    if (!clickedInsideMenu && !clickedBurger) {
+        closeMenu();
+    }
+});
+
+// Закрытие при клике на ссылку меню
 document.querySelectorAll('.mobile-menu__link').forEach(link => {
-    link.addEventListener('click', () => {
-        mobileMenu.classList.remove('mobile-menu--open');
-        overlay.classList.remove('mobile-menu__overlay--visible');
-        burger.classList.remove('burger--active');
-        document.body.style.overflow = '';
-    });
+    link.addEventListener('click', closeMenu);
 });
